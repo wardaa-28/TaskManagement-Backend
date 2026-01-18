@@ -5,7 +5,6 @@ import {
   ManyToOne,
   JoinColumn,
   Unique,
-  CreateDateColumn,
 } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
 import { Board } from '../../boards/entities/board.entity';
@@ -39,7 +38,4 @@ export class BoardMember {
     enum: BoardRole,
   })
   role: BoardRole;
-
-  @CreateDateColumn({ name: 'created_at' })
-  created_at: Date;
 }
